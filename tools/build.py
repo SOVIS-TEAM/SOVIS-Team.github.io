@@ -90,6 +90,25 @@ for lang, p in PAGES.items():
     open(os.path.join(out_dir, 'index.html'), 'w', encoding='utf8', newline='').write(html)
     sizes[lang] = len(html)
 
+# 개인정보처리방침: SV모든것/privacy.html(한국어), privacy_en.html(영어)을 /privacy/, /en/privacy/ 로 옮긴다.
+# 앱(도움말 탭)과 앱 스토어 등록정보가 이 주소를 가리키므로 주소를 바꾸지 않는다.
+PRIVACY = {'ko': ('privacy.html', 'privacy/'), 'en': ('privacy_en.html', 'en/privacy/')}
+for lang, (src, path) in PRIVACY.items():
+    html = open(os.path.join(SRC_DIR, src), encoding='utf8').read()
+    if f'<html lang="{lang}">' not in html:
+        raise SystemExit(f'{src}: <html lang="{lang}"> 가 없습니다')
+    meta = (f'<link rel="canonical" href="{SITE + path}">\n'
+            f'<link rel="alternate" hreflang="ko" href="{SITE}privacy/">\n'
+            f'<link rel="alternate" hreflang="en" href="{SITE}en/privacy/">\n'
+            f'<link rel="alternate" hreflang="x-default" href="{SITE}en/privacy/">\n')
+    anchor = re.search(r'<meta name="description"[^>]*>\n?', html)
+    if not anchor:
+        raise SystemExit(f'{src}: description 메타가 없습니다')
+    html = html[:anchor.end()] + meta + html[anchor.end():]
+    out_dir = os.path.join(OUT, path)
+    os.makedirs(out_dir, exist_ok=True)
+    open(os.path.join(out_dir, 'index.html'), 'w', encoding='utf8', newline='').write(html)
+
 # 없는 주소: /android, /en/android 처럼 해시 없이 들어오면 그 언어의 그 화면으로, 나머지는 그 언어의 홈으로 보낸다.
 routes = ','.join(f"'{r}'" for r in ROUTES)
 open(os.path.join(OUT, '404.html'), 'w', encoding='utf8').write(f'''<!doctype html>
@@ -124,6 +143,9 @@ open(os.path.join(OUT, GOOGLE_VERIFY), 'w', encoding='utf8').write(f'google-site
 links = ''.join(f'    <xhtml:link rel="alternate" hreflang="{h}" href="{u}"/>\n'
                 for h, u in (('ko', SITE), ('en', SITE + 'en/'), ('x-default', SITE + 'en/')))
 urls = ''.join(f'  <url>\n    <loc>{SITE + p["path"]}</loc>\n{links}  </url>\n' for p in PAGES.values())
+privacy_links = ''.join(f'    <xhtml:link rel="alternate" hreflang="{h}" href="{u}"/>\n'
+                        for h, u in (('ko', SITE + 'privacy/'), ('en', SITE + 'en/privacy/'), ('x-default', SITE + 'en/privacy/')))
+urls += ''.join(f'  <url>\n    <loc>{SITE + path}</loc>\n{privacy_links}  </url>\n' for _, path in PRIVACY.values())
 open(os.path.join(OUT, 'sitemap.xml'), 'w', encoding='utf8').write(
     '<?xml version="1.0" encoding="UTF-8"?>\n'
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
