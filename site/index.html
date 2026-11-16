@@ -1386,6 +1386,13 @@ footer.ft{padding:0;border-top:1px solid #E6E8EE;background:#fff;color:var(--ink
 .m-roles dt{font-size:13px;font-weight:800;color:var(--accent);letter-spacing:.01em}
 .m-roles dd{margin:6px 0 0;font-size:14.5px;line-height:1.75;color:var(--ink-2)}
 .m-roles dd+dt{margin-top:16px}
+/* 팀원 사진은 각자 GitHub 사진을 불러온다. 못 불러오면 img 가 지워져 이름 두 글자가 보인다. */
+.m-head .avatar{position:relative;overflow:hidden;flex:none;text-decoration:none;transition:box-shadow .25s}
+.m-head .avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%;background:var(--surface)}
+.m-head a.avatar:hover{box-shadow:0 0 0 3px var(--accent-soft),0 0 0 5px var(--accent)}
+.m-gh{display:inline-flex;align-items:center;gap:6px;margin-top:7px;font-size:13px;font-weight:700;color:var(--ink-2);text-decoration:none}
+.m-gh svg{width:14px;height:14px;flex:none;fill:currentColor}
+.m-gh:hover{color:var(--accent)}
 /* 제품 페이지 왼쪽의 앱 아이콘은 앱 아이콘 모양 그대로 */
 .gs-nav .appico{border-radius:12px}
 /* 글자 대비(흰 바탕에서 4.5:1 이상) */
@@ -1637,26 +1644,26 @@ input[type=range]:focus-visible{outline:2px solid var(--accent);outline-offset:6
     <div class="sh rv"><h2>SOVIS를 만드는 사람들</h2><p>동국대학교 학생 세 명이 개발, AI, 디자인을 나누어 맡고 있습니다</p></div>
     <div class="team team-detail" data-stagger>
       <article class="member rv">
-        <div class="m-head"><div class="avatar" aria-hidden="true">도환</div><div><h3>김도환</h3><p>팀장 · 개발 · 디자인</p></div></div>
+        <div class="m-head"><a class="avatar" href="https://github.com/amophi" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">도환<img src="https://github.com/amophi.png?size=112" alt="" width="52" height="52" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()"></a><div><h3>김도환</h3><p>팀장 · 개발 · 디자인</p><a class="m-gh" href="https://github.com/amophi" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>amophi<span class="sr"> GitHub (새 창)</span></a></div></div>
         <dl class="m-roles">
-          <dt>Windows 버전</dt><dd>화면 위 오버레이와 파도·원형·외곽선 모드, 5.1·7.1 채널 방향 표시와 출력 장치 자동 인식, 런처·설정·단축키·실시간 편집 화면, 크기 고정(진하기로 세기 표현)을 만들고 성능을 다듬었습니다. v2.0에서는 분류 탭·튜토리얼·화면 읽어주기 지원을 더하고 Android에서 다듬은 AI 분류를 옮겨 왔으며, v2.1에서는 쉬운 설정과 사람 소리 조기 표시를 더했습니다.</dd>
-          <dt>Android 버전</dt><dd>앱 구조와 소리 받기 서비스, 오버레이 그리기와 네 가지 표현 모드, 종류별 진동, 외부 사운드 모드, 잠금 화면 위협음 알림, 분류 탭·튜토리얼·도움말, 18개 언어, 테스트와 배포를 맡았습니다.</dd>
-          <dt>그 밖에</dt><dd>팀 운영과 디자인, README와 공모전 문서</dd>
+          <dt>Windows 버전</dt><dd>화면 위 오버레이와 파도·원형·외곽선 모드, 5.1·7.1 채널 방향 표시와 출력 장치 자동 인식을 만들었습니다. 런처·설정·단축키·실시간 편집 화면을 만들고 성능을 다듬었습니다. v2.0과 v2.1에서는 Android에서 다듬은 AI 분류와 분류 탭, 튜토리얼, 쉬운 설정, 사람 소리 조기 표시를 옮겨 오고 화면 읽어주기를 지원했습니다.</dd>
+          <dt>Android 버전</dt><dd>앱 구조와 소리 받기 서비스, 오버레이와 네 가지 표현 모드를 만들었습니다. 종류별 진동, 외부 사운드 모드, 잠금 화면 위협음 알림, 쉬운 설정, 분류 탭과 튜토리얼을 더하고, 18개 언어 지원과 테스트·배포를 맡았습니다.</dd>
+          <dt>그 밖에</dt><dd>팀 운영과 디자인, 웹사이트와 README, 공모전 문서</dd>
         </dl>
       </article>
       <article class="member rv">
-        <div class="m-head"><div class="avatar" aria-hidden="true">가람</div><div><h3>박가람</h3><p>AI</p></div></div>
+        <div class="m-head"><a class="avatar" href="https://github.com/P-garam" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">가람<img src="https://github.com/P-garam.png?size=112" alt="" width="52" height="52" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()"></a><div><h3>박가람</h3><p>AI</p><a class="m-gh" href="https://github.com/P-garam" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>P-garam<span class="sr"> GitHub (새 창)</span></a></div></div>
         <dl class="m-roles">
-          <dt>Windows 버전</dt><dd>YAMNet 입력과 전처리를 모델 규격에 맞추고, 소리를 환경음·사람 소리·위협음으로 나누는 규칙과 흔들림 방지를 만들었습니다. 음악과 효과음에 묻힌 총소리를 잡는 보조 모델을 학습·조정하고, 7.1 채널 AI 입력과 모서리의 파도 그리기를 다듬었습니다.</dd>
-          <dt>Android 버전</dt><dd>AI 분류 과정(Log-mel 전처리, YAMNet ONNX 추론, 세 종류 분류, 총소리 보조 모델)을 기준 출력과 비교하는 테스트와 함께 만들었습니다. Qualcomm YAMNet 전처리로 바꾸고, 위협음 단서와 사람 발성 분류, 사용자가 바꾼 소리 종류를 AI 판정에 반영했으며, 평가 도구와 0.25초 추론 간격을 정했습니다.</dd>
+          <dt>Windows 버전</dt><dd>YAMNet 입력과 전처리를 모델 규격에 맞추고, 소리를 환경음·사람 소리·위협음으로 나누는 규칙과 판정이 흔들리지 않게 하는 처리를 만들었습니다. 음악과 효과음에 묻힌 총소리를 잡는 보조 모델을 학습시키고, 7.1 채널의 AI 입력과 모서리 파도 그리기를 다듬었습니다.</dd>
+          <dt>Android 버전</dt><dd>Log-mel 전처리부터 YAMNet ONNX 추론, 세 종류 분류, 총소리 보조 모델까지 AI 분류 과정을 기준 출력과 맞춰 보는 테스트와 함께 만들었습니다. Qualcomm YAMNet 전처리로 바꾸고, 위협음 단서와 사람 발성 분류, 사용자가 바꾼 소리 종류를 판정에 반영했습니다. 사람 소리를 먼저 알려 주는 음성 감지(Silero)를 더하고, 평가 도구를 만들어 판정 간격을 0.25초로 정했습니다.</dd>
           <dt>그 밖에</dt><dd>AI 평가용 소리 데이터 수집 안내</dd>
         </dl>
       </article>
       <article class="member rv">
-        <div class="m-head"><div class="avatar" aria-hidden="true">성진</div><div><h3>김성진</h3><p>개발</p></div></div>
+        <div class="m-head"><a class="avatar" href="https://github.com/s2ongj1nn" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">성진<img src="https://github.com/s2ongj1nn.png?size=112" alt="" width="52" height="52" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()"></a><div><h3>김성진</h3><p>개발</p><a class="m-gh" href="https://github.com/s2ongj1nn" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>s2ongj1nn<span class="sr"> GitHub (새 창)</span></a></div></div>
         <dl class="m-roles">
-          <dt>Windows 버전</dt><dd>시스템 소리를 받는 캡처 엔진(WASAPI 루프백)을 안정화하고, FFT 처리, 8채널을 2채널로 줄이는 라우팅과 다운믹스, 지연 시간 측정, 개발자 모드의 캡처 정보 표시를 만들었습니다.</dd>
-          <dt>Android 버전</dt><dd>이슈·PR 양식과 기여 안내, 브랜치 규칙을 정리하고, 시각화를 멈출 때 진행 중인 AI 추론을 기다린 뒤 모델을 닫도록 고쳤습니다.</dd>
+          <dt>Windows 버전</dt><dd>시스템 소리를 받는 캡처 엔진(WASAPI 루프백)을 안정화했습니다. FFT 처리, 8채널을 2채널로 줄이는 다운믹스, 지연 시간 측정, 개발자 모드의 캡처 정보 표시를 만들었습니다.</dd>
+          <dt>Android 버전</dt><dd>이슈·PR 양식과 기여 안내, 브랜치 규칙을 정리했습니다. 시각화를 멈출 때 진행 중인 AI 추론이 끝난 뒤 모델을 닫도록 고쳤습니다.</dd>
           <dt>그 밖에</dt><dd>국립서울농학교 사용자 테스트 연락</dd>
         </dl>
       </article>
