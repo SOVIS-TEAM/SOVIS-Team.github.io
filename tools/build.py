@@ -132,6 +132,29 @@ open(os.path.join(OUT, '404.html'), 'w', encoding='utf8').write(f'''<!doctype ht
 </body>
 </html>
 ''')
+# 화면 주소(/android/, /en/windows/ 등)를 진짜 페이지로도 둔다. 404.html 로도 같은 곳에 가지만 응답이 404 라서,
+# 인스타그램 프로필 링크처럼 '#' 뒤를 잘라 버리거나 404 를 꺼리는 곳에는 이 주소를 건다.
+# 쿼리(utm 등)는 그대로 넘기고, 언어는 도착한 페이지의 언어 스크립트가 다시 정한다.
+for prefix in ('', 'en/'):
+    for route in ROUTES:
+        target = f'/{prefix}#/{route}'
+        out_dir = os.path.join(OUT, prefix, route)
+        os.makedirs(out_dir, exist_ok=True)
+        open(os.path.join(out_dir, 'index.html'), 'w', encoding='utf8', newline='').write(f'''<!doctype html>
+<html lang="{'en' if prefix else 'ko'}">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="{SITE}{prefix}">
+<title>SOVIS</title>
+<script>location.replace('/{prefix}' + location.search + '#/{route}');</script>
+<meta http-equiv="refresh" content="0; url={target}">
+</head>
+<body>
+<p><a href="{target}">SOVIS</a></p>
+</body>
+</html>
+''')
 open(os.path.join(OUT, 'robots.txt'), 'w', encoding='utf8').write(f'User-agent: *\nAllow: /\nSitemap: {SITE}sitemap.xml\n')
 # IndexNow 확인 파일: 네이버·빙 등에 새 주소를 알릴 때(api.indexnow.org) 이 사이트의 것임을 보이는 키다. 비밀이 아니다.
 INDEXNOW_KEY = '76cb548c239ce1ffb8a956de1aad218c'
