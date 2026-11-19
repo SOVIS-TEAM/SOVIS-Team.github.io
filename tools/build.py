@@ -8,6 +8,7 @@
 #     없는 주소 안내(404)를 붙인다.
 # 실행: python -I -X utf8 tools/build.py   (사이트 내용을 고칠 때는 두 원본을 함께 고친 뒤 다시 실행)
 import base64
+import json
 import hashlib
 import os
 import re
@@ -54,6 +55,33 @@ def alternates():
             f'<link rel="alternate" hreflang="x-default" href="{SITE}en/">\n')
 
 
+# 검색엔진용 구조화 정보: 사이트 이름(SoundVisualizer), 팀(SOVIS), 앱 두 개(Android, Windows).
+# 앱 주소는 noindex 인 /android/ 같은 이동용 페이지 대신 이 페이지 주소를 쓴다.
+def ld_json(lang, url, about):
+    org = SITE + '#org'
+    app_desc = {'ko': '소리의 방향·세기·종류를 화면 테두리에 그려 보여 주는 농인 및 청각장애인용 접근성 앱',
+                'en': 'Accessibility app for deaf and hard of hearing people that shows the direction, loudness and type of sounds on screen'}[lang]
+    apps = [
+        ('SoundVisualizer for Android', 'Android 10+', 'https://github.com/SOVIS-TEAM/SoundVisualizer-Android'),
+        ('SoundVisualizer for Windows', 'Windows 10, Windows 11', 'https://github.com/SOVIS-TEAM/SoundVisualizer-Windows'),
+    ]
+    graph = [
+        {'@type': 'WebSite', '@id': SITE + '#website', 'url': SITE, 'name': 'SoundVisualizer',
+         'alternateName': ['SOVIS', 'SoundVisualizer by SOVIS'], 'inLanguage': ['ko', 'en'], 'publisher': {'@id': org}},
+        {'@type': 'Organization', '@id': org, 'name': 'SOVIS', 'url': SITE, 'description': about,
+         'email': 'sovis.kr@gmail.com',
+         'sameAs': ['https://github.com/SOVIS-TEAM', 'https://www.instagram.com/soundvisualizer.official/']},
+    ]
+    for name, os_name, repo in apps:
+        graph.append({'@type': 'SoftwareApplication', 'name': name, 'alternateName': 'SoundVisualizer',
+                      'applicationCategory': 'UtilitiesApplication', 'operatingSystem': os_name,
+                      'url': url, 'downloadUrl': repo + '/releases/latest', 'sameAs': repo,
+                      'description': app_desc, 'inLanguage': lang, 'isAccessibleForFree': True,
+                      'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'KRW'},
+                      'author': {'@id': org}, 'publisher': {'@id': org}})
+    return json.dumps({'@context': 'https://schema.org', '@graph': graph}, ensure_ascii=False, separators=(',', ':'))
+
+
 sizes = {}
 for lang, p in PAGES.items():
     html = open(os.path.join(SRC_DIR, p['src']), encoding='utf8').read()
@@ -78,8 +106,7 @@ for lang, p in PAGES.items():
             '<meta property="og:image:width" content="1200">\n'
             '<meta property="og:image:height" content="630">\n'
             '<meta name="twitter:card" content="summary_large_image">\n'
-            f'<script type="application/ld+json">{{"@context":"https://schema.org","@type":"Organization","name":"SOVIS","url":"{url}",'
-            f'"sameAs":["https://github.com/SOVIS-Team"],"description":"{p["about"]}"}}</script>\n')
+            + '<script type="application/ld+json">' + ld_json(lang, url, p['about']) + '</script>\n')
     anchor = re.search(r'<meta name="description"[^>]*>\n?', html)
     if not anchor:
         raise SystemExit(f'{p["src"]}: description 메타가 없습니다')
