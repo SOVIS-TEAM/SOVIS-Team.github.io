@@ -70,7 +70,7 @@ def ld_json(lang, url, about):
          'alternateName': ['SOVIS', 'SoundVisualizer by SOVIS'], 'inLanguage': ['ko', 'en'], 'publisher': {'@id': org}},
         {'@type': 'Organization', '@id': org, 'name': 'SOVIS', 'url': SITE, 'description': about,
          'email': 'sovis.kr@gmail.com',
-         'sameAs': ['https://github.com/SOVIS-TEAM', 'https://www.instagram.com/soundvisualizer.official/']},
+         'sameAs': ['https://github.com/SOVIS-TEAM', 'https://www.instagram.com/soundvisualizer.official/', 'https://www.youtube.com/@soundvisualizer.official']},
     ]
     for name, os_name, repo in apps:
         graph.append({'@type': 'SoftwareApplication', 'name': name, 'alternateName': 'SoundVisualizer',
