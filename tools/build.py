@@ -189,6 +189,9 @@ open(os.path.join(OUT, f'{INDEXNOW_KEY}.txt'), 'w', encoding='utf8').write(INDEX
 # Google Search Console 소유 확인 파일(nawwhod@gmail.com 계정의 https://sovis-team.github.io/ 속성). 지우면 확인이 풀린다.
 GOOGLE_VERIFY = 'google6f32ed8ff5ee74bb.html'
 open(os.path.join(OUT, GOOGLE_VERIFY), 'w', encoding='utf8').write(f'google-site-verification: {GOOGLE_VERIFY}')
+# 네이버 서치어드바이저 소유 확인 파일(https://sovis-team.github.io 사이트). 지우면 확인이 풀린다.
+NAVER_VERIFY = 'naver29b42ac9b0104fcf576f12e23e232bc2.html'
+open(os.path.join(OUT, NAVER_VERIFY), 'w', encoding='utf8').write(f'naver-site-verification: {NAVER_VERIFY}')
 
 links = ''.join(f'    <xhtml:link rel="alternate" hreflang="{h}" href="{u}"/>\n'
                 for h, u in (('ko', SITE), ('en', SITE + 'en/'), ('x-default', SITE + 'en/')))
