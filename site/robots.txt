@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
 Sitemap: https://sovis-team.github.io/sitemap.xml
+
+#DaumWebMasterTool:ee5e05c59156181565e550067e1bc17e9319548d48d36c141de1a79e1c9af6d3:HIcNwRrP5YqFZ/r1eI1o/A==

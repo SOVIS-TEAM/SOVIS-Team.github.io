@@ -182,7 +182,9 @@ for prefix in ('', 'en/'):
 </body>
 </html>
 ''')
-open(os.path.join(OUT, 'robots.txt'), 'w', encoding='utf8').write(f'User-agent: *\nAllow: /\nSitemap: {SITE}sitemap.xml\n')
+# 마지막 줄은 다음(Daum) 웹마스터도구 소유 확인 줄이다. robots.txt 맨 아래에 있어야 하고, 지우면 확인이 풀린다.
+DAUM_VERIFY = '#DaumWebMasterTool:ee5e05c59156181565e550067e1bc17e9319548d48d36c141de1a79e1c9af6d3:HIcNwRrP5YqFZ/r1eI1o/A=='
+open(os.path.join(OUT, 'robots.txt'), 'w', encoding='utf8').write(f'User-agent: *\nAllow: /\nSitemap: {SITE}sitemap.xml\n\n{DAUM_VERIFY}\n')
 # IndexNow 확인 파일: 네이버·빙 등에 새 주소를 알릴 때(api.indexnow.org) 이 사이트의 것임을 보이는 키다. 비밀이 아니다.
 INDEXNOW_KEY = '76cb548c239ce1ffb8a956de1aad218c'
 open(os.path.join(OUT, f'{INDEXNOW_KEY}.txt'), 'w', encoding='utf8').write(INDEXNOW_KEY)
