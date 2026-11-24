@@ -15,16 +15,23 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  # 공식 틀처럼 묶음 올리기와 배포를 두 작업으로 나눈다. 한 작업 안에서 올리자마자 배포하면
+  # 배포 단계가 방금 올린 묶음을 찾지 못하는 일이 생겼다(2026-11-24, "Found 0 artifact(s)").
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.pages.outputs.page_url }}
     steps:
       - uses: actions/checkout@v7
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:
           path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.pages.outputs.page_url }}
+    steps:
       - id: pages
         uses: actions/deploy-pages@v5
