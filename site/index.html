@@ -844,6 +844,14 @@ h1:focus,h1:focus-visible{outline:none}
 .inote{margin-top:18px;font-size:15px;color:var(--ink-2);line-height:1.75}
 .inote b{color:var(--ink)}
 .dlrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.ish{margin:0 0 14px;font-size:18px;font-weight:800;letter-spacing:-.02em;color:var(--ink)}
+.ish+.isteps,.srcs+.ish{margin-top:0}
+.srcs{list-style:none;margin:0 0 40px;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:14px}
+.srcs li{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:24px 24px 22px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r)}
+.srcs-n{font-size:18px;font-weight:800;letter-spacing:-.02em;color:var(--ink)}
+.srcs-n small{margin-left:6px;font-size:13px;font-weight:600;letter-spacing:0;color:var(--ink-3)}
+.srcs p{margin:0;flex:1;font-size:15px;line-height:1.7;color:var(--ink-2)}
+.srcs code{max-width:100%;overflow-x:auto;white-space:nowrap;padding:8px 12px;font-family:var(--mono);font-size:14px;color:var(--ink);background:var(--surface-2);border:1px solid var(--line);border-radius:8px}
 .pagenav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:16px}
 .pagenav a{display:flex;flex-direction:column;gap:3px;background:var(--surface);border:1px solid var(--line);
   border-radius:var(--r);padding:20px 22px;transition:border-color .15s}
@@ -1241,6 +1249,12 @@ body.menu-open{overflow:hidden}
 .gs-dl b{font-size:22px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 .gs-dl b small{margin-left:1px;font-size:.7em;font-weight:700;letter-spacing:0}
 .gs-dl+.gs-btns{margin-top:0}
+.gs-btns a.gs-store{grid-column:1/-1;background:#fff;color:var(--ink);border-bottom:1px solid rgba(255,255,255,.55)}
+.gs-btns a.gs-store:hover{background:var(--accent-soft)}
+.gs-btns a.gs-store+a{border-left:0}
+.gs-also{margin-top:16px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,.85)}
+.gs-also a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.gs-also code{white-space:nowrap;padding:3px 8px;font-family:var(--mono);font-size:13.5px;color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);border-radius:6px}
 .gs :focus-visible{outline-color:#fff}
 @media(max-width:1180px){.gs-in{padding:56px 40px 56px 190px}}
 @media(max-width:960px){
@@ -1533,9 +1547,9 @@ input[type=range]:focus-visible{outline:2px solid var(--accent);outline-offset:6
   <div class="dlc-in"><div class="dlc-box">
     <div class="nws-head"><h2 id="dlcH">누적 다운로드</h2><span class="dlc-src">GitHub Releases 기준</span></div>
     <ul class="dlc-list">
-      <li><div class="it"><span class="k">전체</span><b><span data-dl="all">268</span><small>회</small></b></div></li>
-      <li><a class="it" href="#/android"><span class="k">Android</span><b><span data-dl="android">162</span><small>회</small></b></a></li>
-      <li><a class="it" href="#/windows"><span class="k">Windows</span><b><span data-dl="windows">106</span><small>회</small></b></a></li>
+      <li><div class="it"><span class="k">전체</span><b><span data-dl="all">284</span><small>회</small></b></div></li>
+      <li><a class="it" href="#/android"><span class="k">Android</span><b><span data-dl="android">173</span><small>회</small></b></a></li>
+      <li><a class="it" href="#/windows"><span class="k">Windows</span><b><span data-dl="windows">111</span><small>회</small></b></a></li>
     </ul>
   </div></div>
 </section>
@@ -1741,8 +1755,9 @@ input[type=range]:focus-visible{outline:2px solid var(--accent);outline-offset:6
       <p class="gs-meta"><span>휴대폰 앱</span><span>Android 10 이상</span></p>
       <p class="gs-desc">영상, 음악, 게임 등 휴대폰에서 재생되는 소리를 화면 테두리에 그리고, 소리 종류마다 다른 진동으로도 알립니다. 외부 사운드 모드를 켜면 마이크로 주변 소리도 듣습니다.</p>
       <ul class="gs-checks"><li>진동 알림</li><li>외부 사운드 모드</li><li>18개 언어</li></ul>
-      <p class="gs-dl" data-dl-wrap><span class="k">누적 다운로드</span><b><span data-dl="android">162</span><small>회</small></b></p>
+      <p class="gs-dl" data-dl-wrap><span class="k">누적 다운로드</span><b><span data-dl="android">173</span><small>회</small></b></p>
       <div class="gs-btns">
+        <a class="gs-store" href="https://m.onestore.co.kr/v2/ko-kr/app/0001013096" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>원스토어에서 받기<span class="sr"> (새 창)</span></a>
         <a href="https://github.com/SOVIS-Team/SoundVisualizer-Android/releases/latest" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>APK 받기<span class="sr"> (새 창)</span></a>
         <a href="https://github.com/SOVIS-Team/SoundVisualizer-Android" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4"/><path d="m16 8 4 4-4 4"/><path d="m13.5 5-3 14"/></svg>소스 코드<span class="sr"> (새 창)</span></a>
       </div>
@@ -1884,18 +1899,20 @@ input[type=range]:focus-visible{outline:2px solid var(--accent);outline-offset:6
 
 <section class="sec" id="android-install">
   <div class="wrap">
-    <div class="sh rv"><h2>설치하고 켜는 방법</h2><p>Android 10 이상 휴대폰에서 APK 파일로 설치합니다.</p></div>
+    <div class="sh rv"><h2>설치하고 켜는 방법</h2><p>Android 10 이상 휴대폰에서 돌아갑니다.</p></div>
+    <h3 class="ish rv">받는 곳</h3>
+    <ul class="srcs rv" role="list">
+      <li><span class="srcs-n">원스토어<small>대한민국</small></span><p>원스토어 앱에서 설치하고, 새 버전도 원스토어에서 받습니다.</p><a class="btn btn-primary btn-sm" href="https://m.onestore.co.kr/v2/ko-kr/app/0001013096" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>원스토어에서 받기<span class="sr"> (새 창)</span></a></li>
+      <li><span class="srcs-n">GitHub Releases<small>APK</small></span><p>APK 파일을 받아 휴대폰에 직접 설치합니다.</p><a class="btn btn-ghost btn-sm" href="https://github.com/SOVIS-Team/SoundVisualizer-Android/releases/latest" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>APK 받기<span class="sr"> (새 창)</span></a></li>
+    </ul>
+    <h3 class="ish rv">설치 순서</h3>
     <ol class="isteps" role="list" data-stagger>
-      <li class="rv">휴대폰으로 GitHub Releases에 들어가 <b>SoundVisualizer-v1.9.0.apk</b>를 받아 엽니다. v1.8.4 이하를 쓰던 휴대폰에는 앱이 따로 하나 더 설치되니, 예전 앱은 지워 주세요.</li>
-      <li class="rv">알 수 없는 앱 설치를 허용할지 물으면 허용하고 설치합니다. 갤럭시(One UI 6 이상)는 <b>보안 위험 자동 차단</b>을 잠시 끄고 설치한 뒤 다시 켜 주세요.</li>
+      <li class="rv"><b>원스토어</b>에서 설치하거나, 휴대폰으로 GitHub Releases에 들어가 <b>SoundVisualizer-v1.9.0.apk</b>를 받아 엽니다. v1.8.4 이하를 쓰던 휴대폰에는 앱이 따로 하나 더 설치되니, 예전 앱은 지워 주세요.</li>
+      <li class="rv">APK로 설치할 때 알 수 없는 앱 설치를 허용할지 물으면 허용하고 설치합니다. 갤럭시(One UI 6 이상)는 <b>보안 위험 자동 차단</b>을 잠시 끄고 설치한 뒤 다시 켜 주세요.</li>
       <li class="rv">앱을 열면 튜토리얼이 먼저 뜹니다. 홈에서 <b>실행</b>을 누르고 다른 앱 위에 표시, 마이크, 화면 녹화 권한을 허용합니다.</li>
       <li class="rv">영상이나 음악, 게임처럼 소리가 나는 앱을 켜면 화면 테두리에 소리가 그려집니다. 끌 때는 홈의 <b>실행 종료</b>나 알림의 <b>중지</b>를 누릅니다.</li>
     </ol>
     <p class="inote rv">주변 소리를 들으려면 실행하기 전에 홈의 <b>외부 사운드 모드</b> 스위치를 켭니다. 실행 중에는 바꿀 수 없습니다.</p>
-    <div class="dlrow rv" style="justify-content:center">
-      <a class="btn btn-primary" href="https://github.com/SOVIS-Team/SoundVisualizer-Android/releases/latest" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>APK 받기<span class="sr"> (새 창)</span></a>
-      <a class="btn btn-ghost" href="https://github.com/SOVIS-Team/SoundVisualizer-Android" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4"/><path d="m16 8 4 4-4 4"/><path d="m13.5 5-3 14"/></svg>소스 코드<span class="sr"> (새 창)</span></a>
-    </div>
   </div>
 </section>
 
@@ -1974,13 +1991,15 @@ input[type=range]:focus-visible{outline:2px solid var(--accent);outline-offset:6
     <div class="gs-info">
       <h1 id="gsWindows">SoundVisualizer<small>FOR WINDOWS</small></h1>
       <p class="gs-meta"><span>컴퓨터 앱</span><span>Windows 10/11 64비트</span></p>
-      <p class="gs-desc">컴퓨터에서 재생되는 모든 소리를 받아, 스테레오부터 7.1 채널까지 소리의 방향을 화면 위에 그립니다. 설치 없이 압축을 풀고 바로 실행합니다.</p>
+      <p class="gs-desc">컴퓨터에서 재생되는 모든 소리를 받아, 스테레오부터 7.1 채널까지 소리의 방향을 화면 위에 그립니다. Microsoft Store에서 설치하거나, ZIP을 받아 설치 없이 바로 실행합니다.</p>
       <ul class="gs-checks"><li>7.1 채널 방향</li><li>설치 없이 실행</li><li>화면 읽어주기 지원</li></ul>
-      <p class="gs-dl" data-dl-wrap><span class="k">누적 다운로드</span><b><span data-dl="windows">106</span><small>회</small></b></p>
+      <p class="gs-dl" data-dl-wrap><span class="k">누적 다운로드</span><b><span data-dl="windows">111</span><small>회</small></b></p>
       <div class="gs-btns">
+        <a class="gs-store" href="https://apps.microsoft.com/detail/9ngh48vcrfw2" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>Microsoft Store에서 받기<span class="sr"> (새 창)</span></a>
         <a href="https://github.com/SOVIS-Team/SoundVisualizer-Windows/releases/latest" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>ZIP 받기<span class="sr"> (새 창)</span></a>
         <a href="https://github.com/SOVIS-Team/SoundVisualizer-Windows" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4"/><path d="m16 8 4 4-4 4"/><path d="m13.5 5-3 14"/></svg>소스 코드<span class="sr"> (새 창)</span></a>
       </div>
+      <p class="gs-also"><span><a href="https://community.chocolatey.org/packages/soundvisualizer" target="_blank" rel="noopener">Chocolatey<span class="sr"> (새 창)</span></a>로도 설치할 수 있습니다</span><code>choco install soundvisualizer</code></p>
       <p class="gs-ver">v2.2 · 2026.11.24 공개 · AGPL-3.0 · <a href="#windows-install">설치 방법</a> · <a href="#demo">데모 체험</a> · <a href="https://www.youtube.com/watch?v=NBRV5AWpb38" target="_blank" rel="noopener">소개 영상<span class="sr"> (새 창)</span></a></p>
     </div>
   </div>
@@ -2018,18 +2037,21 @@ input[type=range]:focus-visible{outline:2px solid var(--accent);outline-offset:6
 
 <section class="sec" id="windows-install">
   <div class="wrap">
-    <div class="sh rv"><h2>설치 없이 바로 실행</h2><p>Windows 10/11(64비트)에서 돌아가는 포터블 패키지입니다. .NET을 따로 설치하지 않아도 됩니다.</p></div>
+    <div class="sh rv"><h2>받고 실행하는 방법</h2><p>Windows 10/11(64비트)에서 돌아갑니다. .NET을 따로 설치하지 않아도 됩니다.</p></div>
+    <h3 class="ish rv">받는 곳</h3>
+    <ul class="srcs rv" role="list">
+      <li><span class="srcs-n">Microsoft Store</span><p>스토어에서 설치하고, 새 버전도 스토어에서 받습니다.</p><a class="btn btn-primary btn-sm" href="https://apps.microsoft.com/detail/9ngh48vcrfw2" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>Microsoft Store에서 받기<span class="sr"> (새 창)</span></a></li>
+      <li><span class="srcs-n">GitHub Releases<small>ZIP</small></span><p>설치 없이 압축을 풀고 바로 실행합니다. 설정이 폴더 안에 저장되어 그대로 옮길 수 있습니다.</p><a class="btn btn-ghost btn-sm" href="https://github.com/SOVIS-Team/SoundVisualizer-Windows/releases/latest" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>ZIP 받기<span class="sr"> (새 창)</span></a></li>
+      <li><span class="srcs-n">Chocolatey</span><p>Chocolatey를 쓰고 있다면 명령 한 줄로 설치합니다.</p><code>choco install soundvisualizer</code><a class="btn btn-ghost btn-sm" href="https://community.chocolatey.org/packages/soundvisualizer" target="_blank" rel="noopener">Chocolatey 페이지<span class="sr"> (새 창)</span></a></li>
+    </ul>
+    <h3 class="ish rv">설치 순서</h3>
     <ol class="isteps" role="list" data-stagger>
-      <li class="rv">GitHub Releases에서 <b>SoundVisualizer_v2.2.zip</b>을 받아 원하는 곳에 압축을 풉니다.</li>
-      <li class="rv">폴더 안의 <b>SoundVisualizer.exe</b>를 실행합니다.</li>
-      <li class="rv">‘Windows의 PC 보호’ 창이 뜨면 <b>추가 정보</b>를 누른 뒤 <b>실행</b>을 누릅니다.</li>
+      <li class="rv"><b>Microsoft Store</b>에서 설치하거나, GitHub Releases에서 <b>SoundVisualizer_v2.2.zip</b>을 받아 원하는 곳에 압축을 풉니다.</li>
+      <li class="rv">스토어로 설치했다면 시작 메뉴에서 열고, ZIP이라면 폴더 안의 <b>SoundVisualizer.exe</b>를 실행합니다.</li>
+      <li class="rv">ZIP을 처음 실행할 때 ‘Windows의 PC 보호’ 창이 뜨면 <b>추가 정보</b>를 누른 뒤 <b>실행</b>을 누릅니다.</li>
       <li class="rv">런처에서 언어와 초기 설정을 마친 뒤 <b>실행</b>을 누르면 오버레이가 켜집니다.</li>
     </ol>
-    <p class="inote rv">설정은 SoundVisualizer.exe 옆의 <b>settings.json</b>에 저장되므로, 폴더를 그대로 옮기거나 복사해도 됩니다.</p>
-    <div class="dlrow rv" style="justify-content:center">
-      <a class="btn btn-primary" href="https://github.com/SOVIS-Team/SoundVisualizer-Windows/releases/latest" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>ZIP 받기<span class="sr"> (새 창)</span></a>
-      <a class="btn btn-ghost" href="https://github.com/SOVIS-Team/SoundVisualizer-Windows" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4"/><path d="m16 8 4 4-4 4"/><path d="m13.5 5-3 14"/></svg>소스 코드<span class="sr"> (새 창)</span></a>
-    </div>
+    <p class="inote rv">ZIP으로 받았다면 설정은 SoundVisualizer.exe 옆의 <b>settings.json</b>에 저장되므로, 폴더를 그대로 옮기거나 복사해도 됩니다.</p>
   </div>
 </section>
 
