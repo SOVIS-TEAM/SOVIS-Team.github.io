@@ -1255,6 +1255,7 @@ body.menu-open{overflow:hidden}
 .gs-also{margin-top:16px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,.85)}
 .gs-also a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
 .gs-note{margin:12px auto 0;max-width:34em;text-align:center;font-size:13px;line-height:1.6;color:rgba(255,255,255,.78)}
+.gs-also+.gs-also{margin-top:6px}
 .gs-also code{white-space:nowrap;padding:3px 8px;font-family:var(--mono);font-size:13.5px;color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);border-radius:6px}
 .gs :focus-visible{outline-color:#fff}
 @media(max-width:1180px){.gs-in{padding:56px 40px 56px 190px}}
@@ -1533,7 +1534,7 @@ input[type=range]:focus-visible{outline:2px solid var(--accent);outline-offset:6
   <div class="nws-in">
     <div class="nws-head"><h2 id="nwsH">Latest news</h2><a class="more" href="#/news">More +</a></div>
     <ul class="nws-list" data-stagger>
-            <li class="rv"><a href="#/news/release"><time datetime="2026-11-27">2026.11.27</time><b>SoundVisualizer for Windows v2.3.3 released</b><span>The zip is now a portable version: one exe that runs without unzipping.</span></a></li>
+            <li class="rv"><a href="#/news/release"><time datetime="2026-11-27">2026.11.27</time><b>SoundVisualizer for Windows v2.3.3 released</b><span>A portable version is out too: one exe that runs without unzipping, even at a PC bang.</span></a></li>
             <li class="rv"><a href="#/news/release"><time datetime="2026-11-26">2026.11.26</time><b>SoundVisualizer for Android v1.10.0 released</b><span>Check for updates in Help checks the store you installed from for a new version. The app still has no internet permission.</span></a></li>
             <li class="rv"><a href="#/news/release"><time datetime="2026-11-26">2026.11.26</time><b>SoundVisualizer for Windows v2.3.2 released</b><span>The original app icon is back, and it stays visible at small sizes on the taskbar and in File Explorer.</span></a></li>
             <li class="rv"><a href="#/news/release"><time datetime="2026-11-26">2026.11.26</time><b>SoundVisualizer for Windows v2.3.1 released</b><span>The app checks for new versions and updates itself, and the launcher can be maximized and resized. The icon is easier to see.</span></a></li>
@@ -1554,9 +1555,9 @@ input[type=range]:focus-visible{outline:2px solid var(--accent);outline-offset:6
   <div class="dlc-in"><div class="dlc-box">
     <div class="nws-head"><h2 id="dlcH">Total downloads</h2><span class="dlc-src">From GitHub Releases</span></div>
     <ul class="dlc-list">
-      <li><div class="it"><span class="k">All</span><b><span data-dl="all">354</span></b></div></li>
+      <li><div class="it"><span class="k">All</span><b><span data-dl="all">356</span></b></div></li>
       <li><a class="it" href="#/android"><span class="k">Android</span><b><span data-dl="android">214</span></b></a></li>
-      <li><a class="it" href="#/windows"><span class="k">Windows</span><b><span data-dl="windows">140</span></b></a></li>
+      <li><a class="it" href="#/windows"><span class="k">Windows</span><b><span data-dl="windows">142</span></b></a></li>
     </ul>
   </div></div>
 </section>
@@ -1998,15 +1999,16 @@ input[type=range]:focus-visible{outline:2px solid var(--accent);outline-offset:6
     <div class="gs-info">
       <h1 id="gsWindows">SoundVisualizer<small>FOR WINDOWS</small></h1>
       <p class="gs-meta"><span>Computer app</span><span>Windows 10/11, 64-bit</span></p>
-      <p class="gs-desc">Captures all the sound playing on your computer and draws its direction on the screen, from stereo up to 7.1 channels. Get the installed version from Microsoft Store, or the portable version that runs without installing.</p>
+      <p class="gs-desc">Captures all the sound playing on your computer and draws its direction on the screen, from stereo up to 7.1 channels. Download the ZIP and run it without installing.</p>
       <ul class="gs-checks"><li>7.1-channel direction</li><li>Runs without installing</li><li>Screen reader support</li></ul>
-      <p class="gs-dl" data-dl-wrap><span class="k">Downloads so far</span><b><span data-dl="windows">140</span></b></p>
+      <p class="gs-dl" data-dl-wrap><span class="k">Downloads so far</span><b><span data-dl="windows">142</span></b></p>
       <div class="gs-btns">
-        <a class="gs-store" href="https://apps.microsoft.com/detail/9ngh48vcrfw2" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>Installed version (Microsoft Store)<span class="sr"> (opens in a new tab)</span></a>
-        <a href="https://github.com/SOVIS-Team/SoundVisualizer-Windows/releases/latest" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>Portable version<span class="sr"> (opens in a new tab)</span></a>
+        <a class="gs-store" href="https://github.com/SOVIS-Team/SoundVisualizer-Windows/releases/download/SoundVisualizer_v2.3.3/SoundVisualizer_v2.3.3_standard.zip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>Standard version (ZIP)</a>
+        <a href="https://github.com/SOVIS-Team/SoundVisualizer-Windows/releases/download/SoundVisualizer_v2.3.3/SoundVisualizer_v2.3.3.zip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>Portable version</a>
         <a href="https://github.com/SOVIS-Team/SoundVisualizer-Windows" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4"/><path d="m16 8 4 4-4 4"/><path d="m13.5 5-3 14"/></svg>Source code<span class="sr"> (opens in a new tab)</span></a>
       </div>
-      <p class="gs-note">If the installed version won't run, for example on an internet café (PC bang) computer, download the portable version and run it directly.</p>
+      <p class="gs-note">If the standard version won't run, for example on an internet café (PC bang) computer, download the portable version and run it directly.</p>
+      <p class="gs-also"><span>Also on <a href="https://apps.microsoft.com/detail/9ngh48vcrfw2" target="_blank" rel="noopener">Microsoft Store<span class="sr"> (opens in a new tab)</span></a></span></p>
       <p class="gs-also"><span>Also on <a href="https://community.chocolatey.org/packages/soundvisualizer" target="_blank" rel="noopener">Chocolatey<span class="sr"> (opens in a new tab)</span></a></span><code>choco install soundvisualizer</code></p>
       <p class="gs-ver">v2.3.3 · Released 2026.11.27 · AGPL-3.0 · <a href="#windows-install">How to install</a> · <a href="#demo">Try the demo</a> · <a href="https://www.youtube.com/watch?v=NBRV5AWpb38" target="_blank" rel="noopener">Intro video<span class="sr"> (opens in a new tab)</span></a></p>
     </div>
@@ -2048,18 +2050,19 @@ input[type=range]:focus-visible{outline:2px solid var(--accent);outline-offset:6
     <div class="sh rv"><h2>Get it and run it</h2><p>Runs on Windows 10/11 (64-bit). You don't need to install .NET separately.</p></div>
     <h3 class="ish rv">Where to get it</h3>
     <ul class="srcs rv" role="list">
-      <li><span class="srcs-n">Microsoft Store<small>Installed version</small></span><p>Install it from the Store and get new versions there too.</p><a class="btn btn-primary btn-sm" href="https://apps.microsoft.com/detail/9ngh48vcrfw2" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>Get it from Microsoft Store<span class="sr"> (opens in a new tab)</span></a></li>
-      <li><span class="srcs-n">GitHub Releases<small>Portable version</small></span><p>Runs without installing, from one SoundVisualizer.exe. You can open it straight from the ZIP, and use it on shared computers such as PC bangs and schools, or from a USB drive.</p><a class="btn btn-ghost btn-sm" href="https://github.com/SOVIS-Team/SoundVisualizer-Windows/releases/latest" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>Download portable<span class="sr"> (opens in a new tab)</span></a></li>
+      <li><span class="srcs-n">GitHub Releases<small>Standard version</small></span><p>Extract all the files and run SoundVisualizer.exe in the folder. Settings stay in the folder, so you can move it as it is.</p><a class="btn btn-primary btn-sm" href="https://github.com/SOVIS-Team/SoundVisualizer-Windows/releases/download/SoundVisualizer_v2.3.3/SoundVisualizer_v2.3.3_standard.zip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>Download standard</a></li>
+      <li><span class="srcs-n">GitHub Releases<small>Portable version</small></span><p>Runs without installing, from one SoundVisualizer.exe. You can open it straight from the ZIP, and use it on shared computers such as PC bangs and schools, or from a USB drive.</p><a class="btn btn-ghost btn-sm" href="https://github.com/SOVIS-Team/SoundVisualizer-Windows/releases/download/SoundVisualizer_v2.3.3/SoundVisualizer_v2.3.3.zip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>Download portable</a></li>
+      <li><span class="srcs-n">Microsoft Store</span><p>Install it from the Store and get new versions there too.</p><a class="btn btn-ghost btn-sm" href="https://apps.microsoft.com/detail/9ngh48vcrfw2" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>Get it from Microsoft Store<span class="sr"> (opens in a new tab)</span></a></li>
       <li><span class="srcs-n">Chocolatey</span><p>If you use Chocolatey, install it with one command.</p><code>choco install soundvisualizer</code><a class="btn btn-ghost btn-sm" href="https://community.chocolatey.org/packages/soundvisualizer" target="_blank" rel="noopener">Chocolatey page<span class="sr"> (opens in a new tab)</span></a></li>
     </ul>
     <h3 class="ish rv">How to install</h3>
     <ol class="isteps" role="list" data-stagger>
-      <li class="rv">Install the installed version from <b>Microsoft Store</b>, or download the portable version <b>SoundVisualizer_v2.3.3.zip</b> from GitHub Releases.</li>
-      <li class="rv">Open the installed version from the Start menu. For the portable version, run <b>SoundVisualizer.exe</b> in the ZIP. You don't need to unzip it, and you can copy just the exe anywhere you like.</li>
-      <li class="rv">The first time you run the portable version, if a ‘Windows protected your PC’ window appears, click <b>More info</b>, then <b>Run anyway</b>.</li>
+      <li class="rv">Download the standard version <b>SoundVisualizer_v2.3.3_standard.zip</b> from GitHub Releases and extract all the files anywhere you like.</li>
+      <li class="rv">Run <b>SoundVisualizer.exe</b> in the folder. Where it won't run, such as at a PC bang, download the portable version <b>SoundVisualizer_v2.3.3.zip</b> and run the exe in it without unzipping.</li>
+      <li class="rv">The first time you run it, if a ‘Windows protected your PC’ window appears, click <b>More info</b>, then <b>Run anyway</b>.</li>
       <li class="rv">In the launcher, choose your language and finish the first setup, then click <b>Start</b> to turn on the overlay.</li>
     </ol>
-    <p class="inote rv">The portable version saves settings in <b>settings.json</b> next to SoundVisualizer.exe, so move or copy them together.</p>
+    <p class="inote rv">Settings are saved in <b>settings.json</b> next to SoundVisualizer.exe, so move or copy them together. You can also install it from Microsoft Store or with Chocolatey.</p>
   </div>
 </section>
 
@@ -2085,7 +2088,7 @@ input[type=range]:focus-visible{outline:2px solid var(--accent);outline-offset:6
       </details>
       <details>
         <summary>Do I need to install it?</summary>
-        <div class="ans">No. The portable version is one SoundVisualizer.exe in the ZIP: just run it. You don't need to unzip it or install .NET. If you'd rather install it, get the installed version from Microsoft Store.</div>
+        <div class="ans">No. Extract the ZIP and run SoundVisualizer.exe. The portable version is one exe you can run without unzipping. You don't need to install .NET, and you can also install it from Microsoft Store.</div>
       </details>
     </div>
   </div>
@@ -2343,7 +2346,7 @@ input[type=range]:focus-visible{outline:2px solid var(--accent);outline-offset:6
         <button type="button" data-f="listing" aria-pressed="false">Mentions</button>
     </div>
     <ul class="nlist" data-stagger>
-          <li data-cat="release" class="rv"><a class="ni" href="https://github.com/SOVIS-Team/SoundVisualizer-Windows/releases/tag/SoundVisualizer_v2.3.3" target="_blank" rel="noopener"><time datetime="2026-11-27">2026.11.27</time><span class="tag">Release</span><span><b>SoundVisualizer for Windows v2.3.3 released</b><span class="d">The zip is now a portable version that runs from one exe. Open it straight from the zip, or copy just the exe to use it on shared computers such as internet cafés (PC bangs) and schools, or from a USB drive. If you are on 2.3 or later, open the launcher and click Update now on Home.</span></span><span class="arr" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></span><span class="sr"> (opens in a new tab)</span></a></li>
+          <li data-cat="release" class="rv"><a class="ni" href="https://github.com/SOVIS-Team/SoundVisualizer-Windows/releases/tag/SoundVisualizer_v2.3.3" target="_blank" rel="noopener"><time datetime="2026-11-27">2026.11.27</time><span class="tag">Release</span><span><b>SoundVisualizer for Windows v2.3.3 released</b><span class="d">A portable version that runs from one exe is now out too. Open it straight from the zip, or copy just the exe to use it on shared computers such as internet cafés (PC bangs) and schools, or from a USB drive. The standard version is extracted as before. If you are on 2.3 or later, open the launcher and click Update now on Home.</span></span><span class="arr" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></span><span class="sr"> (opens in a new tab)</span></a></li>
           <li data-cat="release" class="rv"><a class="ni" href="https://github.com/SOVIS-Team/SoundVisualizer-Android/releases/tag/v1.10.0" target="_blank" rel="noopener"><time datetime="2026-11-26">2026.11.26</time><span class="tag">Release</span><span><b>SoundVisualizer for Android v1.10.0 released</b><span class="d">Help &gt; About now has Check for updates. If you installed from Google Play, it asks the Play Store app on your phone whether a new version is available; if you installed from ONE store, it opens the ONE store page. The app still has no internet permission. The app name is now written SoundVisualizer, without a space. Installs over v1.9.2 and keeps your settings.</span></span><span class="arr" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></span><span class="sr"> (opens in a new tab)</span></a></li>
           <li data-cat="release" class="rv"><a class="ni" href="https://github.com/SOVIS-Team/SoundVisualizer-Windows/releases/tag/SoundVisualizer_v2.3.2" target="_blank" rel="noopener"><time datetime="2026-11-26">2026.11.26</time><span class="tag">Release</span><span><b>SoundVisualizer for Windows v2.3.2 released</b><span class="d">The app icon changed in 2.3.1 is back to the original SoundVisualizer logo, and it stays visible where it is shown small, such as the taskbar, File Explorer and the notification area. If you are on 2.3 or later, open the launcher and click Update now on Home.</span></span><span class="arr" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></span><span class="sr"> (opens in a new tab)</span></a></li>
           <li data-cat="release" class="rv"><a class="ni" href="https://github.com/SOVIS-Team/SoundVisualizer-Windows/releases/tag/SoundVisualizer_v2.3.1" target="_blank" rel="noopener"><time datetime="2026-11-26">2026.11.26</time><span class="tag">Release</span><span><b>SoundVisualizer for Windows v2.3.1 released</b><span class="d">The zip version checks for a new version once a day when you open the launcher, and Update now on Home downloads it and swaps it in. Check for updates is in the More info tab. You can maximize the launcher or drag its edges to resize it, and the default size is a little larger. The icon was redrawn so it is easy to see in File Explorer and on the taskbar. From 2.3 on, the app updates itself.</span></span><span class="arr" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></span><span class="sr"> (opens in a new tab)</span></a></li>
