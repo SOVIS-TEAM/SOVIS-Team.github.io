@@ -1254,6 +1254,7 @@ body.menu-open{overflow:hidden}
 .gs-btns a.gs-store+a{border-left:0}
 .gs-also{margin-top:16px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,.85)}
 .gs-also a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.gs-note{margin:12px auto 0;max-width:34em;text-align:center;font-size:13px;line-height:1.6;color:rgba(255,255,255,.78)}
 .gs-also code{white-space:nowrap;padding:3px 8px;font-family:var(--mono);font-size:13.5px;color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);border-radius:6px}
 .gs :focus-visible{outline-color:#fff}
 @media(max-width:1180px){.gs-in{padding:56px 40px 56px 190px}}
@@ -1532,6 +1533,7 @@ input[type=range]:focus-visible{outline:2px solid var(--accent);outline-offset:6
   <div class="nws-in">
     <div class="nws-head"><h2 id="nwsH">새 소식</h2><a class="more" href="#/news">더 보기 +</a></div>
     <ul class="nws-list" data-stagger>
+            <li class="rv"><a href="#/news/release"><time datetime="2026-11-27">2026.11.27</time><b>SoundVisualizer for Windows v2.3.3 공개</b><span>zip이 exe 하나로 켜지는 포터블 버전이 되어, 압축을 풀지 않아도 바로 실행됩니다.</span></a></li>
             <li class="rv"><a href="#/news/release"><time datetime="2026-11-26">2026.11.26</time><b>SoundVisualizer for Android v1.10.0 공개</b><span>도움말의 ‘업데이트 확인’으로 설치한 스토어에서 새 버전을 확인합니다. 인터넷 권한은 여전히 없습니다.</span></a></li>
             <li class="rv"><a href="#/news/release"><time datetime="2026-11-26">2026.11.26</time><b>SoundVisualizer for Windows v2.3.2 공개</b><span>앱 아이콘을 원래 로고로 되돌리고, 작업 표시줄과 탐색기에서 작게도 잘 보이게 했습니다.</span></a></li>
             <li class="rv"><a href="#/news/release"><time datetime="2026-11-26">2026.11.26</time><b>SoundVisualizer for Windows v2.3.1 공개</b><span>앱 안에서 새 버전을 확인하고 바로 업데이트하며, 창을 최대화하거나 크기를 바꿀 수 있습니다. 아이콘도 잘 보이게 바꿨습니다.</span></a></li>
@@ -1552,8 +1554,8 @@ input[type=range]:focus-visible{outline:2px solid var(--accent);outline-offset:6
   <div class="dlc-in"><div class="dlc-box">
     <div class="nws-head"><h2 id="dlcH">누적 다운로드</h2><span class="dlc-src">GitHub Releases 기준</span></div>
     <ul class="dlc-list">
-      <li><div class="it"><span class="k">전체</span><b><span data-dl="all">353</span><small>회</small></b></div></li>
-      <li><a class="it" href="#/android"><span class="k">Android</span><b><span data-dl="android">213</span><small>회</small></b></a></li>
+      <li><div class="it"><span class="k">전체</span><b><span data-dl="all">354</span><small>회</small></b></div></li>
+      <li><a class="it" href="#/android"><span class="k">Android</span><b><span data-dl="android">214</span><small>회</small></b></a></li>
       <li><a class="it" href="#/windows"><span class="k">Windows</span><b><span data-dl="windows">140</span><small>회</small></b></a></li>
     </ul>
   </div></div>
@@ -1653,7 +1655,7 @@ input[type=range]:focus-visible{outline:2px solid var(--accent);outline-offset:6
       <li class="rv"><h3>2026.08</h3><ul><li><b>Windows v1.1</b> 공개 (26일)</li></ul></li>
       <li class="rv"><h3>2026.09</h3><ul><li><b>Android v1.0.0</b> 공개 (15일)</li></ul></li>
       <li class="rv"><h3>2026.10</h3><ul><li><b>Android v1.6.0</b> 외부 사운드 모드 (6일)</li><li><b>Android v1.7.2</b> 공개 (13일)</li><li><b>Windows v2.0</b> 공개 (15일)</li><li>Android 앱으로 당사자 실증 (21일)</li><li><b>Android v1.8.0</b> 공개 (22일)</li></ul></li>
-      <li class="now rv"><h3>2026.11</h3><ul><li>2026 장애인 분야 해커톤 입선 (10일)</li><li><b>Android v1.8.4</b>·<b>Windows v2.1.1</b> 공개 (11일)</li><li><b>Android v1.9.0</b> 공개 (18일)</li><li><b>Windows v2.2</b> 공개 (24일)</li><li><b>Android v1.9.2</b> 공개 (26일)</li><li><b>Windows v2.3.1</b> 공개 (26일)</li><li><b>Android v1.10.0</b> 공개 (26일)</li><li><b>Windows v2.3.2</b> 공개 (26일)</li></ul></li>
+      <li class="now rv"><h3>2026.11</h3><ul><li>2026 장애인 분야 해커톤 입선 (10일)</li><li><b>Android v1.8.4</b>·<b>Windows v2.1.1</b> 공개 (11일)</li><li><b>Android v1.9.0</b> 공개 (18일)</li><li><b>Windows v2.2</b> 공개 (24일)</li><li><b>Android v1.9.2</b> 공개 (26일)</li><li><b>Windows v2.3.1</b> 공개 (26일)</li><li><b>Android v1.10.0</b> 공개 (26일)</li><li><b>Windows v2.3.2</b> 공개 (26일)</li><li><b>Windows v2.3.3</b> 포터블 버전 공개 (27일)</li></ul></li>
     </ol>
     <button class="hist-nav next" id="histNext" type="button" aria-label="다음 기간"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
   </div>
@@ -1760,7 +1762,7 @@ input[type=range]:focus-visible{outline:2px solid var(--accent);outline-offset:6
       <p class="gs-meta"><span>휴대폰 앱</span><span>Android 10 이상</span></p>
       <p class="gs-desc">영상, 음악, 게임 등 휴대폰에서 재생되는 소리를 화면 테두리에 그리고, 소리 종류마다 다른 진동으로도 알립니다. 외부 사운드 모드를 켜면 마이크로 주변 소리도 듣습니다.</p>
       <ul class="gs-checks"><li>진동 알림</li><li>외부 사운드 모드</li><li>18개 언어</li></ul>
-      <p class="gs-dl" data-dl-wrap><span class="k">누적 다운로드</span><b><span data-dl="android">213</span><small>회</small></b></p>
+      <p class="gs-dl" data-dl-wrap><span class="k">누적 다운로드</span><b><span data-dl="android">214</span><small>회</small></b></p>
       <div class="gs-btns">
         <a class="gs-store" href="https://m.onestore.co.kr/v2/ko-kr/app/0001013096" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>원스토어에서 받기<span class="sr"> (새 창)</span></a>
         <a href="https://github.com/SOVIS-Team/SoundVisualizer-Android/releases/latest" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>APK 받기<span class="sr"> (새 창)</span></a>
@@ -1996,16 +1998,17 @@ input[type=range]:focus-visible{outline:2px solid var(--accent);outline-offset:6
     <div class="gs-info">
       <h1 id="gsWindows">SoundVisualizer<small>FOR WINDOWS</small></h1>
       <p class="gs-meta"><span>컴퓨터 앱</span><span>Windows 10/11 64비트</span></p>
-      <p class="gs-desc">컴퓨터에서 재생되는 모든 소리를 받아, 스테레오부터 7.1 채널까지 소리의 방향을 화면 위에 그립니다. Microsoft Store에서 설치하거나, ZIP을 받아 설치 없이 바로 실행합니다.</p>
+      <p class="gs-desc">컴퓨터에서 재생되는 모든 소리를 받아, 스테레오부터 7.1 채널까지 소리의 방향을 화면 위에 그립니다. Microsoft Store에서 설치 버전을 받거나, 포터블 버전을 받아 설치 없이 바로 실행합니다.</p>
       <ul class="gs-checks"><li>7.1 채널 방향</li><li>설치 없이 실행</li><li>화면 읽어주기 지원</li></ul>
       <p class="gs-dl" data-dl-wrap><span class="k">누적 다운로드</span><b><span data-dl="windows">140</span><small>회</small></b></p>
       <div class="gs-btns">
-        <a class="gs-store" href="https://apps.microsoft.com/detail/9ngh48vcrfw2" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>Microsoft Store에서 받기<span class="sr"> (새 창)</span></a>
-        <a href="https://github.com/SOVIS-Team/SoundVisualizer-Windows/releases/latest" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>ZIP 받기<span class="sr"> (새 창)</span></a>
+        <a class="gs-store" href="https://apps.microsoft.com/detail/9ngh48vcrfw2" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>설치 버전 받기 (Microsoft Store)<span class="sr"> (새 창)</span></a>
+        <a href="https://github.com/SOVIS-Team/SoundVisualizer-Windows/releases/latest" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>포터블 받기<span class="sr"> (새 창)</span></a>
         <a href="https://github.com/SOVIS-Team/SoundVisualizer-Windows" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4"/><path d="m16 8 4 4-4 4"/><path d="m13.5 5-3 14"/></svg>소스 코드<span class="sr"> (새 창)</span></a>
       </div>
+      <p class="gs-note">PC방처럼 설치 버전이 실행되지 않는 곳에서는 포터블을 받아 바로 실행하세요.</p>
       <p class="gs-also"><span><a href="https://community.chocolatey.org/packages/soundvisualizer" target="_blank" rel="noopener">Chocolatey<span class="sr"> (새 창)</span></a>로도 설치할 수 있습니다</span><code>choco install soundvisualizer</code></p>
-      <p class="gs-ver">v2.3.2 · 2026.11.26 공개 · AGPL-3.0 · <a href="#windows-install">설치 방법</a> · <a href="#demo">데모 체험</a> · <a href="https://www.youtube.com/watch?v=NBRV5AWpb38" target="_blank" rel="noopener">소개 영상<span class="sr"> (새 창)</span></a></p>
+      <p class="gs-ver">v2.3.3 · 2026.11.27 공개 · AGPL-3.0 · <a href="#windows-install">설치 방법</a> · <a href="#demo">데모 체험</a> · <a href="https://www.youtube.com/watch?v=NBRV5AWpb38" target="_blank" rel="noopener">소개 영상<span class="sr"> (새 창)</span></a></p>
     </div>
   </div>
 </section>
@@ -2045,18 +2048,18 @@ input[type=range]:focus-visible{outline:2px solid var(--accent);outline-offset:6
     <div class="sh rv"><h2>받고 실행하는 방법</h2><p>Windows 10/11(64비트)에서 돌아갑니다. .NET을 따로 설치하지 않아도 됩니다.</p></div>
     <h3 class="ish rv">받는 곳</h3>
     <ul class="srcs rv" role="list">
-      <li><span class="srcs-n">Microsoft Store</span><p>스토어에서 설치하고, 새 버전도 스토어에서 받습니다.</p><a class="btn btn-primary btn-sm" href="https://apps.microsoft.com/detail/9ngh48vcrfw2" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>Microsoft Store에서 받기<span class="sr"> (새 창)</span></a></li>
-      <li><span class="srcs-n">GitHub Releases<small>ZIP</small></span><p>설치 없이 압축을 풀고 바로 실행합니다. 설정이 폴더 안에 저장되어 그대로 옮길 수 있습니다.</p><a class="btn btn-ghost btn-sm" href="https://github.com/SOVIS-Team/SoundVisualizer-Windows/releases/latest" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>ZIP 받기<span class="sr"> (새 창)</span></a></li>
+      <li><span class="srcs-n">Microsoft Store<small>설치 버전</small></span><p>스토어에서 설치하고, 새 버전도 스토어에서 받습니다.</p><a class="btn btn-primary btn-sm" href="https://apps.microsoft.com/detail/9ngh48vcrfw2" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>Microsoft Store에서 받기<span class="sr"> (새 창)</span></a></li>
+      <li><span class="srcs-n">GitHub Releases<small>포터블 버전</small></span><p>설치 없이 SoundVisualizer.exe 하나로 바로 실행합니다. 압축을 풀지 않고 ZIP 안에서 열어도 되고, PC방·학교처럼 여럿이 쓰는 컴퓨터나 USB에서도 씁니다.</p><a class="btn btn-ghost btn-sm" href="https://github.com/SOVIS-Team/SoundVisualizer-Windows/releases/latest" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>포터블 받기<span class="sr"> (새 창)</span></a></li>
       <li><span class="srcs-n">Chocolatey</span><p>Chocolatey를 쓰고 있다면 명령 한 줄로 설치합니다.</p><code>choco install soundvisualizer</code><a class="btn btn-ghost btn-sm" href="https://community.chocolatey.org/packages/soundvisualizer" target="_blank" rel="noopener">Chocolatey 페이지<span class="sr"> (새 창)</span></a></li>
     </ul>
     <h3 class="ish rv">설치 순서</h3>
     <ol class="isteps" role="list" data-stagger>
-      <li class="rv"><b>Microsoft Store</b>에서 설치하거나, GitHub Releases에서 <b>SoundVisualizer_v2.3.2.zip</b>을 받아 원하는 곳에 압축을 풉니다.</li>
-      <li class="rv">스토어로 설치했다면 시작 메뉴에서 열고, ZIP이라면 폴더 안의 <b>SoundVisualizer.exe</b>를 실행합니다.</li>
-      <li class="rv">ZIP을 처음 실행할 때 ‘Windows의 PC 보호’ 창이 뜨면 <b>추가 정보</b>를 누른 뒤 <b>실행</b>을 누릅니다.</li>
+      <li class="rv"><b>Microsoft Store</b>에서 설치 버전을 설치하거나, GitHub Releases에서 포터블 버전 <b>SoundVisualizer_v2.3.3.zip</b>을 받습니다.</li>
+      <li class="rv">설치 버전은 시작 메뉴에서 열고, 포터블 버전은 ZIP 안의 <b>SoundVisualizer.exe</b>를 실행합니다. 압축을 풀지 않아도 되고, exe만 원하는 곳에 복사해 써도 됩니다.</li>
+      <li class="rv">포터블 버전을 처음 실행할 때 ‘Windows의 PC 보호’ 창이 뜨면 <b>추가 정보</b>를 누른 뒤 <b>실행</b>을 누릅니다.</li>
       <li class="rv">런처에서 언어와 초기 설정을 마친 뒤 <b>실행</b>을 누르면 오버레이가 켜집니다.</li>
     </ol>
-    <p class="inote rv">ZIP으로 받았다면 설정은 SoundVisualizer.exe 옆의 <b>settings.json</b>에 저장되므로, 폴더를 그대로 옮기거나 복사해도 됩니다.</p>
+    <p class="inote rv">포터블 버전의 설정은 SoundVisualizer.exe 옆의 <b>settings.json</b>에 저장되므로, exe와 함께 옮기거나 복사하면 됩니다.</p>
   </div>
 </section>
 
@@ -2082,7 +2085,7 @@ input[type=range]:focus-visible{outline:2px solid var(--accent);outline-offset:6
       </details>
       <details>
         <summary>설치해야 하나요?</summary>
-        <div class="ans">아니요. 압축을 풀고 SoundVisualizer.exe를 실행하면 됩니다. .NET을 따로 설치할 필요가 없고, 설정은 실행 파일 옆 settings.json에 저장되어 폴더째 옮겨 쓸 수 있습니다.</div>
+        <div class="ans">아니요. 포터블 버전은 ZIP 안의 SoundVisualizer.exe 하나만 실행하면 됩니다. 압축을 풀지 않아도 되고 .NET을 따로 설치할 필요도 없습니다. 설치해서 쓰려면 Microsoft Store의 설치 버전을 받으면 됩니다.</div>
       </details>
     </div>
   </div>
@@ -2340,6 +2343,7 @@ input[type=range]:focus-visible{outline:2px solid var(--accent);outline-offset:6
         <button type="button" data-f="listing" aria-pressed="false">외부 소개</button>
     </div>
     <ul class="nlist" data-stagger>
+          <li data-cat="release" class="rv"><a class="ni" href="https://github.com/SOVIS-Team/SoundVisualizer-Windows/releases/tag/SoundVisualizer_v2.3.3" target="_blank" rel="noopener"><time datetime="2026-11-27">2026.11.27</time><span class="tag">릴리스</span><span><b>SoundVisualizer for Windows v2.3.3 공개</b><span class="d">zip이 실행 파일 하나로 켜지는 포터블 버전이 되었습니다. 압축을 풀지 않고 zip 안에서 바로 열거나, exe만 복사해 PC방·학교 컴퓨터나 USB에서도 쓸 수 있습니다. 2.3 이상을 쓰고 있다면 런처를 열어 홈의 ‘지금 업데이트’로 바로 바꿀 수 있습니다.</span></span><span class="arr" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></span><span class="sr"> (새 창)</span></a></li>
           <li data-cat="release" class="rv"><a class="ni" href="https://github.com/SOVIS-Team/SoundVisualizer-Android/releases/tag/v1.10.0" target="_blank" rel="noopener"><time datetime="2026-11-26">2026.11.26</time><span class="tag">릴리스</span><span><b>SoundVisualizer for Android v1.10.0 공개</b><span class="d">도움말 &gt; 앱 정보의 ‘업데이트 확인’이 생겼습니다. Play 스토어에서 설치했다면 휴대폰의 Play 스토어 앱에 새 버전이 있는지 묻고, 원스토어에서 설치했다면 원스토어 페이지를 엽니다. 앱에는 여전히 인터넷 권한이 없습니다. 앱 이름을 띄어 쓰지 않고 SoundVisualizer로 적게 고쳤습니다. v1.9.2 위에 그대로 설치되고 설정도 남습니다.</span></span><span class="arr" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></span><span class="sr"> (새 창)</span></a></li>
           <li data-cat="release" class="rv"><a class="ni" href="https://github.com/SOVIS-Team/SoundVisualizer-Windows/releases/tag/SoundVisualizer_v2.3.2" target="_blank" rel="noopener"><time datetime="2026-11-26">2026.11.26</time><span class="tag">릴리스</span><span><b>SoundVisualizer for Windows v2.3.2 공개</b><span class="d">2.3.1에서 바뀐 앱 아이콘을 원래 SoundVisualizer 로고로 되돌렸습니다. 작업 표시줄·탐색기·알림 영역처럼 작게 보이는 곳에서도 고리가 잘 보입니다. 2.3 이상을 쓰고 있다면 런처를 열어 홈의 ‘지금 업데이트’로 바로 바꿀 수 있습니다.</span></span><span class="arr" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></span><span class="sr"> (새 창)</span></a></li>
           <li data-cat="release" class="rv"><a class="ni" href="https://github.com/SOVIS-Team/SoundVisualizer-Windows/releases/tag/SoundVisualizer_v2.3.1" target="_blank" rel="noopener"><time datetime="2026-11-26">2026.11.26</time><span class="tag">릴리스</span><span><b>SoundVisualizer for Windows v2.3.1 공개</b><span class="d">zip 판은 런처를 열 때 하루 한 번 새 버전을 확인하고, 홈의 ‘지금 업데이트’로 내려받아 바로 바꿉니다. 업데이트 확인은 ‘더 알아보기’ 탭에 있습니다. 런처를 최대화하거나 가장자리를 끌어 크기를 바꿀 수 있고, 기본 크기를 조금 키웠습니다. 탐색기와 작업 표시줄에서 아이콘이 잘 보이게 다시 그렸습니다. 2.3부터는 앱이 스스로 업데이트합니다.</span></span><span class="arr" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></span><span class="sr"> (새 창)</span></a></li>
